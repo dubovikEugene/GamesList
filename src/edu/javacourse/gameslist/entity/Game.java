@@ -1,7 +1,5 @@
 package edu.javacourse.gameslist.entity;
 
-import java.time.LocalDate;
-
 public class Game {
     private Long id;
     private String title;
@@ -25,7 +23,7 @@ public class Game {
         this.developer = developer;
     }
 
-    public Long getId() {
+    public Long getGameId() {
         return id;
     }
 

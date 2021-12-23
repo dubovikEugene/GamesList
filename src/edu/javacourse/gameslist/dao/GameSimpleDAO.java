@@ -19,7 +19,7 @@ public class GameSimpleDAO implements GameDAO {
 
     @Override
     public void updateGame(Game game) {
-        Game oldGame = getGame(game.getId());
+        Game oldGame = getGame(game.getGameId());
         if (oldGame != null) {
             oldGame.setTitle(game.getTitle());
             oldGame.setGenre(game.getGenre());
@@ -31,7 +31,7 @@ public class GameSimpleDAO implements GameDAO {
     public void deleteGame(Long gameId) {
         for (Iterator<Game> it = games.iterator(); it.hasNext();) {
             Game gm = it.next();
-            if(gm.getId().equals(gameId)) {
+            if(gm.getGameId().equals(gameId)) {
                 it.remove();
             }
         }
@@ -40,7 +40,7 @@ public class GameSimpleDAO implements GameDAO {
     @Override
     public Game getGame(Long gameId) {
         for(Game game: games) {
-            if (game.getId().equals(gameId)){
+            if (game.getGameId().equals(gameId)){
                 return game;
             }
         }
