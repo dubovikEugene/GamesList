@@ -18,6 +18,13 @@ public class Game {
         this.developer = developer;
     }
 
+    public Game(Long id, String title, String genre, String developer) {
+        this.id = id;
+        this.title = title;
+        this.genre = genre;
+        this.developer = developer;
+    }
+
     public Long getId() {
         return id;
     }
