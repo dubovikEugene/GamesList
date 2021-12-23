@@ -49,4 +49,14 @@ public class Game {
     public void setDeveloper(String developer) {
         this.developer = developer;
     }
+
+    @Override
+    public String toString() {
+        return "Game{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", genre='" + genre + '\'' +
+                ", developer='" + developer + '\'' +
+                '}';
+    }
 }
